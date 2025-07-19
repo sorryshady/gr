@@ -1,5 +1,5 @@
-For smooth scroll - client-layout.js take it from format archive and not wu wei
-View transitions for page transition. Very important.
+For smooth scroll - client-layout.js take it from format archive and not wu wei DONE
+View transitions for page transition. Very important. (check one implementation)
 BtnLink nice All these from wu wei
 Animated h1 and animated copy from isochrome or nico palmer
 cool marquee from algora
