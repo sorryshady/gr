@@ -6,7 +6,7 @@ cool marquee from algora
 progress bar also from algora nice
 also cool case studies and projects
 footer also nice
-Responsive image, error boundary from gr_group
+Responsive image, error boundary from gr_group DONE
 folder structure from gr_group
 FAQ from nico palmer
 footer scroll to top is easy  

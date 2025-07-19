@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { ViewTransitions } from 'next-view-transitions'
-import ClientLayout from '@/components/client-layout'
+import ClientLayout from '@/components/layout/client-layout'
 import ErrorBoundary from '@/components/ErrorBoundary'
 
 const geistSans = Geist({
