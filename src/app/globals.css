@@ -66,3 +66,8 @@ html.lenis {
   z-index: 1;
   animation: none !important;
 }
+
+::selection {
+  background: var(--primary);
+  color: var(--background);
+}

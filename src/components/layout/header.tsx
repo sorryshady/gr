@@ -178,7 +178,7 @@ const Header = () => {
     <>
       <nav
         ref={headerRef}
-        className="bg-background fixed top-2 right-4 left-4 z-50 rounded-full border border-gray-200/30 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-sm md:right-[80px] md:left-[80px] lg:right-[100px] lg:left-[100px]"
+        className="bg-background fixed top-2 right-4 left-4 z-50 rounded-full border border-gray-200/30 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-sm md:right-[80px] md:left-[80px] xl:right-[100px] xl:left-[100px]"
       >
         <div className="mx-auto flex items-center justify-between">
           {/* Logo */}
@@ -191,7 +191,7 @@ const Header = () => {
             }}
           >
             <div className="bg-primary flex h-8 w-8 items-center justify-center rounded-lg sm:h-10 sm:w-10">
-              <span className="text-sm font-bold text-white md:text-base">GR</span>
+              <span className="text-background text-sm font-bold md:text-base">GR</span>
             </div>
             <span className="text-xl font-semibold text-gray-900 md:text-2xl">GR Groups</span>
           </Link>
@@ -245,7 +245,7 @@ const Header = () => {
           />
           <div
             ref={mobileMenuRef}
-            className="fixed top-[70px] right-4 left-4 mt-5 overflow-hidden rounded-2xl border border-gray-200/30 bg-white shadow-lg md:right-[80px] md:left-[80px] lg:right-[100px] lg:left-[100px]"
+            className="fixed top-[70px] right-4 left-4 mt-5 overflow-hidden rounded-2xl border border-gray-200/30 bg-white shadow-lg md:right-[80px] md:left-[80px]"
             style={{ height: 0 }}
           >
             <div

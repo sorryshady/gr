@@ -101,7 +101,7 @@ function DefaultErrorFallback({ error, resetError }: ErrorFallbackProps) {
         <div className="space-y-3">
           <button
             onClick={resetError}
-            className="w-full rounded-lg bg-gray-900 px-4 py-2 font-medium text-white transition-colors hover:bg-gray-800 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:outline-none"
+            className="text-background w-full rounded-lg bg-gray-900 px-4 py-2 font-medium transition-colors hover:bg-gray-800 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:outline-none"
           >
             Try again
           </button>

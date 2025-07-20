@@ -1,9 +1,0 @@
-.char {
-  display: inline-block;
-  letter-spacing: 0;
-}
-
-.char-mask {
-  overflow: hidden;
-  display: inline-block;
-}
