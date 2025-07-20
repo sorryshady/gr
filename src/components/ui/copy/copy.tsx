@@ -19,7 +19,7 @@ interface CopyProps {
 }
 
 export default function Copy({ children, animateOnScroll = true, delay = 0, className }: CopyProps) {
-  const isMobile = useMedia('(max-width: 768px)', false)
+  const isMobile = useMedia('(max-width: 767px)', false)
   const containerRef = useRef<HTMLDivElement>(null)
   const elementRefs = useRef<HTMLElement[]>([])
   const splitRefs = useRef<SplitText[]>([])

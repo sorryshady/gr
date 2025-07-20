@@ -19,7 +19,7 @@ interface HeadingProps {
 
 const Heading = ({ animateOnScroll = true, delay = 0, type = 'h1', text }: HeadingProps) => {
   const headingRef = useRef<HTMLDivElement | null>(null)
-  const isMobile = useMedia('(max-width: 768px)', false)
+  const isMobile = useMedia('(max-width: 767px)', false)
 
   useGSAP(
     () => {
