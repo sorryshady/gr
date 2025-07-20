@@ -57,7 +57,7 @@ const ParallaxImage = ({ src, alt, speed = 0.3 }: ParallaxImageProps) => {
         currentTranslateY.current = lerp(currentTranslateY.current, targetTranslateY.current, 0.1)
 
         if (Math.abs(currentTranslateY.current - targetTranslateY.current) > 0.01) {
-          imageRef.current.style.transform = `translateY(${currentTranslateY.current}px) scale(1.5)`
+          imageRef.current.style.transform = `translateY(${currentTranslateY.current}px)`
         }
       }
       rafId.current = requestAnimationFrame(animate)
@@ -94,7 +94,6 @@ const ParallaxImage = ({ src, alt, speed = 0.3 }: ParallaxImageProps) => {
         height: '100%',
         objectFit: 'cover',
         willChange: isDesktop ? 'transform' : 'auto',
-        transform: isDesktop ? 'translateY(0) scale(1.5)' : 'none',
         position: 'absolute',
         top: 0,
         left: 0,

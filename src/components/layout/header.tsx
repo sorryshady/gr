@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRef, useState } from 'react'
 import Button from '../ui/button'
+import { slideInOut } from '@/lib/utils'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -36,7 +37,7 @@ const Header = () => {
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
+          duration: 1.1,
           ease: 'power2.out',
         },
       )
@@ -132,43 +133,43 @@ const Header = () => {
     }, 750)
   }
 
-  function slideInOut() {
-    document.documentElement.animate(
-      [
-        {
-          opacity: 1,
-          transform: 'translateY(0)',
-        },
-        {
-          opacity: 0.2,
-          transform: 'translateY(-35%)',
-        },
-      ],
-      {
-        duration: 1200,
-        easing: 'cubic-bezier(0.87, 0, 0.13, 1)',
-        fill: 'forwards',
-        pseudoElement: '::view-transition-old(root)',
-      },
-    )
+  // function slideInOut() {
+  //   document.documentElement.animate(
+  //     [
+  //       {
+  //         opacity: 1,
+  //         transform: 'translateY(0)',
+  //       },
+  //       {
+  //         opacity: 0.2,
+  //         transform: 'translateY(-35%)',
+  //       },
+  //     ],
+  //     {
+  //       duration: 1200,
+  //       easing: 'cubic-bezier(0.87, 0, 0.13, 1)',
+  //       fill: 'forwards',
+  //       pseudoElement: '::view-transition-old(root)',
+  //     },
+  //   )
 
-    document.documentElement.animate(
-      [
-        {
-          clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
-        },
-        {
-          clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-        },
-      ],
-      {
-        duration: 1200,
-        easing: 'cubic-bezier(0.87, 0, 0.13, 1)',
-        fill: 'forwards',
-        pseudoElement: '::view-transition-new(root)',
-      },
-    )
-  }
+  //   document.documentElement.animate(
+  //     [
+  //       {
+  //         clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
+  //       },
+  //       {
+  //         clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+  //       },
+  //     ],
+  //     {
+  //       duration: 1200,
+  //       easing: 'cubic-bezier(0.87, 0, 0.13, 1)',
+  //       fill: 'forwards',
+  //       pseudoElement: '::view-transition-new(root)',
+  //     },
+  //   )
+  // }
 
   const handleBackdropClick = () => {
     closeMobileMenu()
@@ -178,7 +179,7 @@ const Header = () => {
     <>
       <nav
         ref={headerRef}
-        className="bg-background fixed top-2 right-4 left-4 z-50 rounded-full border border-gray-200/30 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-sm md:right-[80px] md:left-[80px] xl:right-[100px] xl:left-[100px]"
+        className="bg-background fixed top-3 right-4 left-4 z-50 rounded-full border border-gray-200/30 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-sm md:right-[80px] md:left-[80px] xl:right-[100px] xl:left-[100px]"
       >
         <div className="mx-auto flex items-center justify-between">
           {/* Logo */}

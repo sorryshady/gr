@@ -24,7 +24,7 @@ const FadeIn = ({
   stagger = 0.1,
   direction = 'up',
   delay = 0,
-  duration = 0.5,
+  duration = 1.5,
   easing = 'power4.inOut',
   className,
   animateOnScroll = true,
@@ -35,10 +35,10 @@ const FadeIn = ({
   useGSAP(
     () => {
       if (!ref.current) return
-      gsap.set(ref.current, {
+      gsap.set(ref.current.children, {
         opacity: 0,
-        y: direction === 'up' ? '100%' : direction === 'down' ? '-100%' : '0%',
-        x: direction === 'left' ? '100%' : direction === 'right' ? '-100%' : '0%',
+        y: direction === 'up' ? '20%' : direction === 'down' ? '-20%' : '0%',
+        x: direction === 'left' ? '20%' : direction === 'right' ? '-20%' : '0%',
       })
       const animationProps = {
         y: '0%',
@@ -50,7 +50,7 @@ const FadeIn = ({
         ease: easing,
       }
       if (animateOnScroll) {
-        gsap.to(ref.current, {
+        gsap.to(ref.current.children, {
           ...animationProps,
           scrollTrigger: {
             trigger: ref.current,
@@ -59,7 +59,7 @@ const FadeIn = ({
           },
         })
       } else {
-        gsap.to(ref.current, animationProps)
+        gsap.to(ref.current.children, animationProps)
       }
     },
     {
