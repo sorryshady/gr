@@ -1,129 +1,93 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
-import { useMedia } from 'react-use'
-import './copy.css'
 
-import { useGSAP } from '@gsap/react'
+import React, { useRef, ReactElement } from 'react'
+
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
-import { useRef } from 'react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
+import { useMedia } from 'react-use'
 
 gsap.registerPlugin(SplitText, ScrollTrigger)
 
 interface CopyProps {
-  children: React.ReactNode
+  children: ReactElement | ReactElement[]
   animateOnScroll?: boolean
   delay?: number
+  className?: string
 }
 
-const Copy = ({ children, animateOnScroll = true, delay = 0 }: CopyProps) => {
-  const isMobile = useMedia('(max-width: 768px)')
-  const containerRef = useRef<HTMLDivElement | null>(null)
-  const elementRefs = useRef<(HTMLDivElement | Element)[]>([])
+export default function Copy({ children, animateOnScroll = true, delay = 0, className }: CopyProps) {
+  const isMobile = useMedia('(max-width: 768px)', false)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const elementRefs = useRef<HTMLElement[]>([])
   const splitRefs = useRef<SplitText[]>([])
   const lines = useRef<Element[]>([])
 
-  const waitForFonts = async () => {
-    try {
-      await document.fonts.ready
-
-      const customFonts = ['nm', 'DM Mono']
-      const fontCheckPromises = customFonts.map(fontFamily => {
-        return document.fonts.check(`16px ${fontFamily}`)
-      })
-
-      await Promise.all(fontCheckPromises)
-      await new Promise(resolve => setTimeout(resolve, 100))
-
-      return true
-    } catch (error) {
-      console.warn('Font loading check failed, proceeding anyway:', error)
-      await new Promise(resolve => setTimeout(resolve, 200))
-      return true
-    }
-  }
-
   useGSAP(
     () => {
-      const initializeSplitText = async () => {
-        await waitForFonts()
+      if (!containerRef.current) return
 
-        if (!containerRef.current) return
+      splitRefs.current = []
+      lines.current = []
+      elementRefs.current = []
 
-        splitRefs.current = []
-        lines.current = []
-        elementRefs.current = []
+      let elements: HTMLElement[] = []
+      if (containerRef.current.hasAttribute('data-copy-wrapper')) {
+        elements = Array.from(containerRef.current.children) as HTMLElement[]
+      } else {
+        elements = [containerRef.current]
+      }
 
-        let elements: (HTMLDivElement | Element)[] = []
-        if (containerRef.current.hasAttribute('data-copy-wrapper')) {
-          elements = Array.from(containerRef.current.children)
-        } else {
-          elements = [containerRef.current]
-        }
+      elements.forEach(element => {
+        elementRefs.current.push(element)
 
-        elements.forEach(element => {
-          if (!element) return
-
-          elementRefs.current.push(element)
-
-          const split = SplitText.create(element, {
-            type: 'lines',
-            mask: 'lines',
-            linesClass: 'line++',
-            lineThreshold: 0.1,
-          })
-
-          splitRefs.current.push(split)
-
-          const computedStyle = window.getComputedStyle(element)
-          const textIndent = computedStyle.textIndent
-
-          if (textIndent && textIndent !== '0px') {
-            if (split.lines.length > 0 && split.lines[0] instanceof HTMLElement) {
-              ;(split.lines[0] as HTMLElement).style.paddingLeft = textIndent
-            }
-            if (element instanceof HTMLElement) {
-              element.style.textIndent = '0'
-            }
-          }
-
-          lines.current.push(...split.lines)
+        const split = SplitText.create(element, {
+          type: 'lines',
+          mask: 'lines',
+          linesClass: 'line++',
+          lineThreshold: 0.1,
         })
 
-        gsap.set(lines.current, { y: '100%' })
+        splitRefs.current.push(split)
 
-        const animationProps = {
-          y: '0%',
-          duration: 1,
-          stagger: 0.1,
-          ease: 'power4.out',
-          delay: delay,
+        const computedStyle = window.getComputedStyle(element)
+        const textIndent = computedStyle.textIndent
+
+        if (textIndent && textIndent !== '0px') {
+          if (split.lines.length > 0) {
+            ;(split.lines[0] as HTMLElement).style.paddingLeft = textIndent
+          }
+          ;(element as HTMLElement).style.textIndent = '0'
         }
 
-        if (animateOnScroll) {
-          if (isMobile) {
-            gsap.to(lines.current, {
-              ...animationProps,
-              scrollTrigger: {
-                trigger: containerRef.current,
-                start: 'top 90%',
-                once: true,
-              },
-            })
-          } else
-            gsap.to(lines.current, {
-              ...animationProps,
-              scrollTrigger: {
-                trigger: containerRef.current,
-                start: 'top 75%',
-                once: true,
-              },
-            })
-        } else {
-          gsap.to(lines.current, animationProps)
-        }
+        lines.current.push(...split.lines)
+      })
+
+      gsap.set(lines.current, { y: '100%' })
+
+      const animationProps = {
+        y: '0%',
+        duration: 1,
+        stagger: 0.1,
+        ease: 'power4.out',
+        delay: delay,
       }
-      initializeSplitText()
+
+      if (animateOnScroll) {
+        gsap.to(lines.current, {
+          ...animationProps,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: isMobile ? 'top 90%' : 'top 75%',
+            // markers: true,
+            toggleActions: 'play none none reverse',
+          },
+        })
+      } else {
+        gsap.to(lines.current, animationProps)
+      }
 
       return () => {
         splitRefs.current.forEach(split => {
@@ -135,14 +99,21 @@ const Copy = ({ children, animateOnScroll = true, delay = 0 }: CopyProps) => {
     },
     { scope: containerRef, dependencies: [animateOnScroll, delay] },
   )
+
+  if (React.Children.count(children) === 1) {
+    const child = React.Children.only(children)
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, { ref: containerRef } as any)
+    }
+  }
+
   return (
     <div
       ref={containerRef}
       data-copy-wrapper="true"
+      className={className}
     >
       {children}
     </div>
   )
 }
-
-export default Copy
