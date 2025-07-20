@@ -2,6 +2,7 @@
 import { WHAT_WE_DO_CONTENT } from '@/lib/constants'
 import Container from '../layout/container'
 import Copy from '../ui/copy/copy'
+import FadeIn from '../animations/fade-in'
 
 const ServicesSection = () => {
   return (
@@ -20,11 +21,13 @@ const ServicesSection = () => {
       </div>
       <div className="mt-10 grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
         {WHAT_WE_DO_CONTENT.services.map(service => (
-          <article key={service.id}>
-            <h3 className="mb-2 font-serif text-xl leading-tight font-bold text-gray-900 sm:text-2xl">
-              {service.title}
-            </h3>
-          </article>
+          <FadeIn key={service.id}>
+            <article className="">
+              <h3 className="mb-2 font-serif text-xl leading-tight font-bold text-gray-900 sm:text-2xl">
+                {service.title}
+              </h3>
+            </article>
+          </FadeIn>
         ))}
       </div>
     </Container>
