@@ -54,6 +54,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
     <ReactLenis
       root
       options={scrollSettings}
+      className="relative"
     >
       {children}
     </ReactLenis>

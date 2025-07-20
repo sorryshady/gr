@@ -4,6 +4,7 @@ import './globals.css'
 import { ViewTransitions } from 'next-view-transitions'
 import ClientLayout from '@/components/layout/client-layout'
 import ErrorBoundary from '@/components/ErrorBoundary'
+import Header from '@/components/layout/header'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ViewTransitions>
           <ClientLayout>
+            <Header />
             <ErrorBoundary>{children}</ErrorBoundary>
           </ClientLayout>
         </ViewTransitions>
