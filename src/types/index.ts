@@ -25,5 +25,12 @@ export interface PageContent {
     secondaryCtaLink: string
     backgroundImage: string
   }
+  about: {
+    heading: string
+    headLine: string
+    description: string[]
+    learnMoreLink: string
+    imageLink: string
+  }
   sections: BusinessVertical[]
 }

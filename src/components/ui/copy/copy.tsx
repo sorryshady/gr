@@ -8,6 +8,7 @@ import { SplitText } from 'gsap/SplitText'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import { useMedia } from 'react-use'
+import './copy.css'
 
 gsap.registerPlugin(SplitText, ScrollTrigger)
 

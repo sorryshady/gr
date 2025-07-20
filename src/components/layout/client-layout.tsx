@@ -2,9 +2,11 @@
 import { useEffect, useState } from 'react'
 
 import { ReactLenis } from 'lenis/react'
+import { usePathname } from 'next/navigation'
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const [isMobile, setIsMobile] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const checkMobile = () => {
@@ -55,6 +57,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       root
       options={scrollSettings}
       className="relative"
+      key={pathname}
     >
       {children}
     </ReactLenis>

@@ -32,7 +32,7 @@ const Button = ({
     primary: 'bg-primary text-background hover:bg-primary/10 hover:text-primary',
     secondary: 'bg-background text-primary hover:bg-primary hover:text-background',
     ghost: 'bg-transparent text-primary hover:bg-primary/10',
-    link: 'text-primary/70 hover:text-primary p-0',
+    link: 'text-primary/70 hover:text-primary p-0!',
     outline: 'border border-background text-background hover:bg-primary hover:border-primary',
   }
 
