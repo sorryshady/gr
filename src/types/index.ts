@@ -40,3 +40,15 @@ export interface PageContent {
   }
   services: Service[]
 }
+
+export interface SiteConfig {
+  name: string
+  description: string
+  url: string
+  email: string
+  social: {
+    linkedin: string
+    instagram: string
+    twitter: string
+  }
+}

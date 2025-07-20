@@ -7,11 +7,12 @@ interface ParallaxImageProps {
   src: string
   alt: string
   speed?: number
+  grayscale?: boolean
 }
 
 const lerp = (start: number, end: number, factor: number) => start + (end - start) * factor
 
-const ParallaxImage = ({ src, alt, speed = 0.3 }: ParallaxImageProps) => {
+const ParallaxImage = ({ src, alt, speed = 0.3, grayscale = false }: ParallaxImageProps) => {
   const imageRef = useRef<HTMLImageElement>(null)
   const bounds = useRef<{ top: number; bottom: number; height: number } | null>(null)
   const currentTranslateY = useRef(0)
@@ -97,6 +98,7 @@ const ParallaxImage = ({ src, alt, speed = 0.3 }: ParallaxImageProps) => {
         position: 'absolute',
         top: 0,
         left: 0,
+        filter: grayscale ? 'grayscale(100%)' : 'none',
       }}
     />
   )

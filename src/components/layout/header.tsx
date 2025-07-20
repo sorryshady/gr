@@ -1,6 +1,6 @@
 'use client'
 import { NAVIGATION_ITEMS } from '@/lib/constants'
-import { NavigationItem } from '@/types'
+import { slideInOut } from '@/lib/utils'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -10,7 +10,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRef, useState } from 'react'
 import Button from '../ui/button'
-import { slideInOut } from '@/lib/utils'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -132,44 +131,6 @@ const Header = () => {
       setIsAnimating(false)
     }, 750)
   }
-
-  // function slideInOut() {
-  //   document.documentElement.animate(
-  //     [
-  //       {
-  //         opacity: 1,
-  //         transform: 'translateY(0)',
-  //       },
-  //       {
-  //         opacity: 0.2,
-  //         transform: 'translateY(-35%)',
-  //       },
-  //     ],
-  //     {
-  //       duration: 1200,
-  //       easing: 'cubic-bezier(0.87, 0, 0.13, 1)',
-  //       fill: 'forwards',
-  //       pseudoElement: '::view-transition-old(root)',
-  //     },
-  //   )
-
-  //   document.documentElement.animate(
-  //     [
-  //       {
-  //         clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
-  //       },
-  //       {
-  //         clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-  //       },
-  //     ],
-  //     {
-  //       duration: 1200,
-  //       easing: 'cubic-bezier(0.87, 0, 0.13, 1)',
-  //       fill: 'forwards',
-  //       pseudoElement: '::view-transition-new(root)',
-  //     },
-  //   )
-  // }
 
   const handleBackdropClick = () => {
     closeMobileMenu()

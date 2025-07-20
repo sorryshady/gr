@@ -1,10 +1,11 @@
+import ErrorBoundary from '@/components/ErrorBoundary'
+import ClientLayout from '@/components/layout/client-layout'
+import Header from '@/components/layout/header'
 import type { Metadata } from 'next'
+import { ViewTransitions } from 'next-view-transitions'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import { ViewTransitions } from 'next-view-transitions'
-import ClientLayout from '@/components/layout/client-layout'
-import ErrorBoundary from '@/components/ErrorBoundary'
-import Header from '@/components/layout/header'
+import Footer from '@/components/layout/footer'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -37,6 +38,7 @@ export default function RootLayout({
           <ClientLayout>
             <Header />
             <ErrorBoundary>{children}</ErrorBoundary>
+            <Footer />
           </ClientLayout>
         </ViewTransitions>
       </body>

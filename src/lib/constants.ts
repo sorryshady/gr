@@ -1,4 +1,4 @@
-import { NavigationItem, PageContent } from '@/types'
+import { NavigationItem, PageContent, SiteConfig } from '@/types'
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: 'Home', href: '/' },
@@ -33,7 +33,7 @@ export const ABOUT_CONTENT: PageContent['about'] = {
 }
 
 export const WHAT_WE_DO_CONTENT: PageContent['whatWeDo'] = {
-  heading: 'What We Do',
+  heading: 'What We Do?',
   headLine: 'Crafting Impact Across Industries',
   description:
     'GR Group operates across a spectrum of high-value industries, delivering excellence through global exports, signature events, and emerging lifestyle ventures. Each vertical reflects our commitment to precision, partnership, and purpose-driven growth. From logistics to luxury, we create experiences and ecosystems that elevate brands and build lasting value.',
@@ -85,4 +85,25 @@ export const WHAT_WE_DO_CONTENT: PageContent['whatWeDo'] = {
       route: '/collaborations',
     },
   ],
+}
+
+export const CONTACT_CTA = {
+  headline: "Let's Build Something Exceptional",
+  description:
+    "Ready to explore partnership opportunities or discuss your next project? We're here to turn ambitious ideas into reality.",
+  ctaText: 'Get In Touch',
+  ctaLink: '/contact',
+} as const
+
+export const SITE_CONFIG: SiteConfig = {
+  name: 'GR Group',
+  description:
+    'A multidisciplinary conglomerate specializing in premium exports, signature events, lifestyle ventures, and strategic collaborations.',
+  url: 'https://grgroup.com',
+  email: 'hello@grgroup.com',
+  social: {
+    linkedin: 'https://linkedin.com/company/grgroup',
+    instagram: 'https://instagram.com/grgroup',
+    twitter: 'https://twitter.com/grgroup',
+  },
 }
