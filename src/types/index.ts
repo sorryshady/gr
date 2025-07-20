@@ -3,7 +3,7 @@ export interface NavigationItem {
   href: string
 }
 
-export interface BusinessVertical {
+export interface Service {
   id: string
   title: string
   tagline: string
@@ -32,5 +32,11 @@ export interface PageContent {
     learnMoreLink: string
     imageLink: string
   }
-  sections: BusinessVertical[]
+  whatWeDo: {
+    heading: string
+    headLine: string
+    description: string
+    services: Service[]
+  }
+  services: Service[]
 }

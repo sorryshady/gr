@@ -8,6 +8,7 @@ import Button from '../ui/button'
 import { useTransitionRouter } from 'next-view-transitions'
 import { slideInOut } from '@/lib/utils'
 import { ExternalLink } from 'lucide-react'
+import FadeIn from '../animations/fade-in'
 
 const AboutSection = () => {
   const router = useTransitionRouter()
@@ -22,7 +23,7 @@ const AboutSection = () => {
       className="flex items-center justify-center"
       id="about"
     >
-      <div className="flex flex-row gap-8">
+      <div className="flex w-full flex-col gap-8 lg:flex-row lg:justify-center">
         <div>
           <Copy className="mb-8 flex max-w-xl flex-col gap-4">
             <h3 className="text-primary/50 text-lg font-medium tracking-wide md:text-2xl">{ABOUT_CONTENT.heading}</h3>
@@ -38,17 +39,19 @@ const AboutSection = () => {
               ))}
             </>
           </Copy>
-          <Button
-            size="md"
-            variant="link"
-            onClick={() => navigateTo(ABOUT_CONTENT.learnMoreLink)}
-            className="relative flex items-center gap-2"
-          >
-            <span>Learn More</span>
-            <ExternalLink className="h-4 w-4" />
-          </Button>
+          <FadeIn direction="up">
+            <Button
+              size="md"
+              variant="link"
+              onClick={() => navigateTo(ABOUT_CONTENT.learnMoreLink)}
+              className="relative flex items-center gap-2"
+            >
+              <span>Learn More</span>
+              <ExternalLink className="h-4 w-4" />
+            </Button>
+          </FadeIn>
         </div>
-        <div className="relative h-[500px] w-[400px] overflow-hidden">
+        <div className="relative h-[500px] w-full overflow-hidden lg:w-[400px]">
           <div className="relative size-full overflow-hidden">
             <ParallaxImage
               src={ABOUT_CONTENT.imageLink}
