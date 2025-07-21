@@ -19,9 +19,9 @@ const CTASection = () => {
       id="cta"
     >
       <div className="bg-primary/80 w-full rounded-4xl py-[60px]">
-        <div className="flex flex-col justify-center gap-5">
+        <div className="flex flex-col justify-center gap-5 p-4">
           <Copy className="mx-auto flex max-w-3xl flex-col gap-3 text-center">
-            <h2 className="text-background text-4xl font-medium md:text-5xl">{CONTACT_CTA.headline}</h2>
+            <h2 className="text-background text-2xl font-medium md:text-5xl">{CONTACT_CTA.headline}</h2>
             <p className="text-background text-base font-medium md:text-lg">{CONTACT_CTA.description}</p>
           </Copy>
           <FadeIn
