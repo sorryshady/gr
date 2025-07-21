@@ -1,13 +1,10 @@
 'use client'
 import { NAVIGATION_ITEMS, SITE_CONFIG } from '@/lib/constants'
-import Link from 'next/link'
-import React from 'react'
-import Container from './container'
-import Copy from '../ui/copy/copy'
-import Button from '../ui/button'
-import { useTransitionRouter } from 'next-view-transitions'
 import { slideInOut } from '@/lib/utils'
+import { useTransitionRouter } from 'next-view-transitions'
 import { usePathname } from 'next/navigation'
+import Button from '../ui/button'
+import Copy from '../ui/copy/copy'
 
 const Footer = () => {
   const router = useTransitionRouter()

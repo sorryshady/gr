@@ -34,7 +34,7 @@ const ServicesSection = () => {
         <FadeIn
           duration={0.8}
           stagger={0.1}
-          easing="power2.in"
+          easing="power2.out"
           className="mt-10 grid w-full max-w-6xl grid-cols-1 gap-5 p-0 md:p-5 lg:grid-cols-2"
         >
           {WHAT_WE_DO_CONTENT.services.map((service, index) => (

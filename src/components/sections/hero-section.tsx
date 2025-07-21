@@ -4,7 +4,7 @@ import { HERO_CONTENT } from '@/lib/constants'
 import ParallaxImage from '../ui/ParallaxImage'
 import Button from '../ui/button'
 import FadeIn from '../animations/fade-in'
-import { scrollTo, slideInOut } from '@/lib/utils'
+import { formatImageUrl, scrollTo, slideInOut } from '@/lib/utils'
 import { useTransitionRouter } from 'next-view-transitions'
 
 const HeroSection = () => {
@@ -14,6 +14,8 @@ const HeroSection = () => {
       onTransitionReady: slideInOut,
     })
   }
+
+  const imageUrl = formatImageUrl(HERO_CONTENT.backgroundImage, 1200, 800)
   return (
     <section
       className="relative flex h-screen items-center justify-center overflow-hidden"
@@ -24,7 +26,7 @@ const HeroSection = () => {
         aria-hidden="true"
       >
         <ParallaxImage
-          src={HERO_CONTENT.backgroundImage}
+          src={imageUrl}
           alt={HERO_CONTENT.headline}
           speed={0.2}
         />

@@ -1,11 +1,10 @@
 'use client'
 import { CONTACT_CTA } from '@/lib/constants'
+import { slideInOut } from '@/lib/utils'
+import { useTransitionRouter } from 'next-view-transitions'
+import FadeIn from '../animations/fade-in'
 import Button from '../ui/button'
 import Copy from '../ui/copy/copy'
-import { useTransitionRouter } from 'next-view-transitions'
-import { slideInOut } from '@/lib/utils'
-import FadeIn from '../animations/fade-in'
-import Container from '../layout/container'
 
 const CTASection = () => {
   const router = useTransitionRouter()

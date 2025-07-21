@@ -18,7 +18,7 @@ export const HERO_CONTENT: PageContent['hero'] = {
   primaryCtaLink: '/contact',
   secondaryCta: 'Learn More',
   secondaryCtaLink: '#about',
-  backgroundImage: 'https://images.unsplash.com/photo-1557804506-669a67965ba0', // Unsplash ID
+  backgroundImage: 'photo-1557804506-669a67965ba0', // Unsplash ID
 }
 
 export const ABOUT_CONTENT: PageContent['about'] = {
@@ -29,7 +29,7 @@ export const ABOUT_CONTENT: PageContent['about'] = {
     'Our work bridges commerce, culture, and innovation — driven by a belief that true legacy is built through intentional action and bold partnerships. Every initiative we undertake is designed to elevate, inspire, and endure.',
   ],
   learnMoreLink: '/about',
-  imageLink: 'https://images.unsplash.com/photo-1646733367524-50c25e6e2022',
+  imageLink: 'photo-1646733367524-50c25e6e2022',
 }
 
 export const WHAT_WE_DO_CONTENT: PageContent['whatWeDo'] = {
@@ -46,7 +46,7 @@ export const WHAT_WE_DO_CONTENT: PageContent['whatWeDo'] = {
         'We connect global markets with premium products through trusted sourcing networks and seamless logistics solutions.',
       testimonial: 'We deliver what we promise — excellence in every shipment.',
       features: ['Premium Product Sourcing', 'Global Logistics Network', 'Quality Assurance', 'Trusted Partnerships'],
-      imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d', // Unsplash ID - shipping/logistics
+      imageUrl: 'photo-1586528116311-ad8dd3c8310d', // Unsplash ID - shipping/logistics
       isComingSoon: false,
       route: '/exports',
     },
@@ -58,7 +58,7 @@ export const WHAT_WE_DO_CONTENT: PageContent['whatWeDo'] = {
         'From luxury automobile showcases to brand launches, we create unforgettable experiences that build brands and move markets.',
       testimonial: 'Our events make headlines, build brands, and move markets.',
       features: ['Luxury Automobile Showcases', 'Product Launches', 'Experiential Marketing', 'Corporate Gatherings'],
-      imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30', // Unsplash ID - luxury event
+      imageUrl: 'photo-1492684223066-81342ee5ff30', // Unsplash ID - luxury event
       isComingSoon: false,
       route: '/events',
     },
@@ -69,7 +69,7 @@ export const WHAT_WE_DO_CONTENT: PageContent['whatWeDo'] = {
       description:
         'Building the next generation of lifestyle brands that merge sustainability with craftsmanship for conscious consumers.',
       features: ['Sustainable Fashion', 'Artisan Collaborations', 'Conscious Consumerism', 'Creative Partnerships'],
-      imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8', // Unsplash ID - fashion/lifestyle
+      imageUrl: 'photo-1441986300917-64674bd600d8', // Unsplash ID - fashion/lifestyle
       isComingSoon: true,
       route: '/ventures',
     },
@@ -80,7 +80,7 @@ export const WHAT_WE_DO_CONTENT: PageContent['whatWeDo'] = {
       description:
         'Partnering with entrepreneurs, agencies, and artists to create innovative solutions and impact-first ventures.',
       features: ['Creative Hubs', 'Limited-Edition Projects', 'Impact-First Ventures', 'Community Building'],
-      imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f', // Unsplash ID - collaboration/teamwork
+      imageUrl: 'photo-1522202176988-66273c2fd55f', // Unsplash ID - collaboration/teamwork
       isComingSoon: true,
       route: '/collaborations',
     },

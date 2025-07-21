@@ -57,3 +57,35 @@ export function slideInOut() {
     },
   )
 }
+
+export const formatImageUrl = (
+  unsplashId: string,
+  width = 1200,
+  height = 800,
+  options?: {
+    quality?: number
+    blur?: number
+    grayscale?: boolean
+    sepia?: boolean
+    brightness?: number
+    contrast?: number
+  },
+) => {
+  const params = new URLSearchParams({
+    w: width.toString(),
+    h: height.toString(),
+    fit: 'crop',
+    crop: 'center',
+    auto: 'format',
+    q: (options?.quality || 100).toString(),
+  })
+
+  // Apply image filters for consistent branding
+  if (options?.blur) params.append('blur', options.blur.toString())
+  if (options?.grayscale) params.append('sat', '-100')
+  if (options?.sepia) params.append('sepia', '100')
+  if (options?.brightness) params.append('bri', options.brightness.toString())
+  if (options?.contrast) params.append('con', options.contrast.toString())
+
+  return `https://images.unsplash.com/${unsplashId}?${params.toString()}`
+}

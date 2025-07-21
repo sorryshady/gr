@@ -6,7 +6,7 @@ import Container from '../layout/container'
 import Copy from '../ui/copy/copy'
 import Button from '../ui/button'
 import { useTransitionRouter } from 'next-view-transitions'
-import { slideInOut } from '@/lib/utils'
+import { formatImageUrl, slideInOut } from '@/lib/utils'
 import { ExternalLink } from 'lucide-react'
 import FadeIn from '../animations/fade-in'
 
@@ -17,6 +17,7 @@ const AboutSection = () => {
       onTransitionReady: slideInOut,
     })
   }
+  const imageUrl = formatImageUrl(ABOUT_CONTENT.imageLink, 1000, 1000)
 
   return (
     <Container
@@ -54,7 +55,7 @@ const AboutSection = () => {
         <div className="relative h-[500px] w-full overflow-hidden lg:w-3xl">
           <div className="relative size-full overflow-hidden">
             <ParallaxImage
-              src={ABOUT_CONTENT.imageLink}
+              src={imageUrl}
               alt={ABOUT_CONTENT.heading}
               speed={0.2}
             />
