@@ -6,7 +6,7 @@ import { ABOUT_LEADERSHIP_CONTENT } from '@/lib/constants'
 const LeadershipSection = () => {
   return (
     <Container
-      className="flex h-screen flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center"
       id="leadership"
     >
       <div className="flex w-full max-w-6xl flex-col items-center justify-center px-5 py-10">

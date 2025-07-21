@@ -15,6 +15,14 @@ export interface Service {
   route: string
 }
 
+export interface TimelineItem {
+  id: string
+  year: string
+  title: string
+  description: string
+  isComingSoon?: boolean
+}
+
 export interface PageContent {
   hero: {
     headline: string
@@ -62,6 +70,12 @@ export interface PageContent {
       title: string
       description: string
     }[]
+  }
+  aboutTimeline: {
+    heading: string
+    headLine: string
+    description: string
+    timelineItems: TimelineItem[]
   }
 }
 

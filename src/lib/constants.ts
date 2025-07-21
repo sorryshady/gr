@@ -155,3 +155,56 @@ export const ABOUT_LEADERSHIP_CONTENT: PageContent['aboutLeadership'] = {
     },
   ],
 }
+
+export const ABOUT_TIMELINE_CONTENT: PageContent['aboutTimeline'] = {
+  heading: 'Our Journey',
+  headLine: 'From Vision to Realization',
+  description:
+    "From our founding vision to our ambitious future plans, explore the milestones that define GR Group's evolution and growth.",
+  timelineItems: [
+    {
+      id: 'foundation',
+      year: '2020',
+      title: 'Foundation & Vision',
+      description:
+        'GR Group was founded with a vision to bridge premium products, unforgettable experiences, and innovative ventures across global markets.',
+    },
+    {
+      id: 'exports-launch',
+      year: '2021',
+      title: 'Global Exports Division',
+      description:
+        'Launched our premium export operations, establishing trusted sourcing networks and seamless logistics solutions across multiple industries.',
+    },
+    {
+      id: 'events-expansion',
+      year: '2022',
+      title: 'Signature Events Portfolio',
+      description:
+        'Expanded into luxury event management, creating headline-making experiences for automotive showcases, product launches, and corporate gatherings.',
+    },
+    {
+      id: 'current-growth',
+      year: '2024',
+      title: 'Strategic Growth Phase',
+      description:
+        'Strengthening our core verticals while preparing for expansion into lifestyle ventures and creative collaborations.',
+    },
+    {
+      id: 'lifestyle-ventures',
+      year: '2025',
+      title: 'Lifestyle Ventures Launch',
+      description:
+        'Launching our fashion-forward sustainable brands division, focusing on conscious consumerism and artisan collaborations.',
+      isComingSoon: true,
+    },
+    {
+      id: 'collaboration-hub',
+      year: '2025',
+      title: 'Collaboration & Community Hub',
+      description:
+        'Opening our creative collaboration space for entrepreneurs, agencies, and artists to co-create impact-first ventures.',
+      isComingSoon: true,
+    },
+  ],
+}
