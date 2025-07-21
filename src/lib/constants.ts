@@ -1,5 +1,5 @@
 import { NavigationItem, PageContent, SiteConfig } from '@/types'
-import { CircleCheck, Handshake, Sparkle, Sprout } from 'lucide-react'
+import { CircleCheck, Globe, Handshake, PackageSearch, ShieldCheck, Sparkle, Sprout } from 'lucide-react'
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: 'Home', href: '/' },
@@ -247,4 +247,76 @@ export const EXPORTS_HERO_CONTENT: PageContent['exportsHero'] = {
     'We connect global markets with premium products through our extensive network of trusted suppliers and seamless logistics solutions. Our commitment to excellence ensures that every shipment meets the highest standards of quality and reliability.',
   cta: 'Learn More',
   ctaLink: '#capabilities',
+}
+
+export const EXPORTS_CAPABILITIES_CONTENT: PageContent['exportsCapabilities'] = {
+  heading: 'Our Capabilities',
+  headLine: 'Delivering Excellence at Every Stage',
+  description:
+    'Our export operations are built on precision, consistency, and trust. From sourcing premium products to managing seamless international logistics, we ensure quality and reliability at every step of the journey. Our global partner network and rigorous standards reflect our commitment to delivering excellence without compromise.',
+  capabilities: [
+    {
+      title: 'Premium Product Sourcing',
+      description: 'Access to high-quality products from verified suppliers worldwide',
+      icon: PackageSearch,
+    },
+    {
+      title: 'Global Logistics Network',
+      description: 'Seamless delivery solutions across international markets',
+      icon: Globe,
+    },
+    {
+      title: 'Quality Assurance',
+      description: 'Rigorous quality control processes at every step',
+      icon: ShieldCheck,
+    },
+    {
+      title: 'Trusted Partnerships',
+      description: 'Long-term relationships built on reliability and excellence',
+      icon: Handshake,
+    },
+  ],
+}
+
+export const EXPORTS_INDUSTRIES_CONTENT: PageContent['exportsIndustries'] = {
+  heading: 'Industries We Serve',
+  headLine: 'Serving a Diverse Range of Industries',
+  description:
+    'Our expertise spans across multiple industries, ensuring specialized knowledge and tailored solutions for every sector.',
+  industries: [
+    'Consumer Electronics',
+    'Fashion & Textiles',
+    'Home & Garden',
+    'Automotive Parts',
+    'Industrial Equipment',
+    'More to come...',
+  ],
+}
+
+export const EXPORTS_PROCESS_CONTENT: PageContent['exportsProcess'] = {
+  heading: 'Our Process',
+  headLine: 'From Vision to Reality',
+  description:
+    'From initial consultation to final delivery, we ensure a seamless experience at every step of the export process.',
+  process: [
+    {
+      title: 'Consultation & Planning',
+      description:
+        ' We work closely with you to understand your requirements and develop a customized export strategy.',
+    },
+    {
+      title: 'Sourcing & Quality Control',
+      description: 'Our network of trusted suppliers ensures premium products that meet rigorous quality standards.',
+    },
+    {
+      title: 'Logistics & Delivery',
+      description:
+        'Seamless logistics management ensures your products reach their destination on time and in perfect condition.',
+    },
+  ],
+}
+
+export const TAGLINES = {
+  exports: 'We deliver what we promise — excellence in every shipment.',
+  events: 'Our events make headlines, build brands, and move markets.',
 }

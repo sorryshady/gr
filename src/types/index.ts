@@ -97,6 +97,31 @@ export interface PageContent {
     cta: string
     ctaLink: string
   }
+  exportsCapabilities: {
+    heading: string
+    headLine: string
+    description: string
+    capabilities: {
+      title: string
+      description: string
+      icon: LucideIcon
+    }[]
+  }
+  exportsIndustries: {
+    heading: string
+    headLine: string
+    description: string
+    industries: string[]
+  }
+  exportsProcess: {
+    heading: string
+    headLine: string
+    description: string
+    process: {
+      title: string
+      description: string
+    }[]
+  }
 }
 
 export interface SiteConfig {
