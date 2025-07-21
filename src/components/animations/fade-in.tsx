@@ -54,7 +54,7 @@ const FadeIn = ({
           ...animationProps,
           scrollTrigger: {
             trigger: ref.current,
-            start: isMobile ? 'top 90%' : 'top 75%',
+            start: isMobile ? 'top 90%' : 'top 85%',
             toggleActions: 'play none none reverse',
           },
         })

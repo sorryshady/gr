@@ -18,7 +18,7 @@ const Footer = () => {
   }
   return (
     <footer
-      className="m-5 rounded-4xl bg-blue-200 p-10"
+      className="m-5 rounded-4xl bg-blue-200 p-4 py-10 md:p-10"
       // style={{ height: 'calc(100svh - 40px)' }}
     >
       <div className="grid grid-cols-1 gap-8 md:grid-cols-4 xl:px-[100px]">

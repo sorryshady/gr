@@ -1,3 +1,5 @@
+import { LucideIcon } from 'lucide-react'
+
 export interface NavigationItem {
   name: string
   href: string
@@ -76,6 +78,16 @@ export interface PageContent {
     headLine: string
     description: string
     timelineItems: TimelineItem[]
+  }
+  aboutValues: {
+    heading: string
+    headLine: string
+    description: string
+    values: {
+      title: string
+      description: string
+      icon: LucideIcon
+    }[]
   }
 }
 

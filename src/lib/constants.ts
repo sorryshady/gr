@@ -1,4 +1,5 @@
 import { NavigationItem, PageContent, SiteConfig } from '@/types'
+import { CircleCheck, Handshake, Sparkle, Sprout } from 'lucide-react'
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: 'Home', href: '/' },
@@ -205,6 +206,35 @@ export const ABOUT_TIMELINE_CONTENT: PageContent['aboutTimeline'] = {
       description:
         'Opening our creative collaboration space for entrepreneurs, agencies, and artists to co-create impact-first ventures.',
       isComingSoon: true,
+    },
+  ],
+}
+
+export const ABOUT_VALUES_CONTENT: PageContent['aboutValues'] = {
+  heading: 'Our Values',
+  headLine: 'Guiding Our Mission',
+  description: 'The principles that guide every decision we make and every partnership we forge.',
+  values: [
+    {
+      title: 'Excellence',
+      description: 'We deliver what we promise — excellence in every shipment, event, and venture.',
+      icon: CircleCheck,
+    },
+    {
+      title: 'Innovation',
+      description:
+        "We see opportunities where others see boundaries, constantly pushing the limits of what's possible.",
+      icon: Sparkle,
+    },
+    {
+      title: 'Sustainability',
+      description: ' Our future ventures prioritize conscious consumerism and sustainable practices.',
+      icon: Sprout,
+    },
+    {
+      title: 'Collaboration',
+      description: 'We believe in the power of partnerships to create meaningful impact and drive change.',
+      icon: Handshake,
     },
   ],
 }
