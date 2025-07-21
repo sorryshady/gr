@@ -1,5 +1,10 @@
 import React from 'react'
+import HeroSection from './_components/hero-section'
 
 export default function ExportsPage() {
-  return <div>ExportsPage</div>
+  return (
+    <main>
+      <HeroSection />
+    </main>
+  )
 }

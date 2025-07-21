@@ -89,6 +89,14 @@ export interface PageContent {
       icon: LucideIcon
     }[]
   }
+  exportsHero: {
+    imageLink: string
+    heading: string
+    tagline: string
+    description: string
+    cta: string
+    ctaLink: string
+  }
 }
 
 export interface SiteConfig {

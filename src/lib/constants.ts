@@ -238,3 +238,13 @@ export const ABOUT_VALUES_CONTENT: PageContent['aboutValues'] = {
     },
   ],
 }
+
+export const EXPORTS_HERO_CONTENT: PageContent['exportsHero'] = {
+  imageLink: 'photo-1586528116311-ad8dd3c8310d',
+  heading: 'Global Exports',
+  tagline: 'Premium Products. Trusted Sourcing. Seamless Delivery.',
+  description:
+    'We connect global markets with premium products through our extensive network of trusted suppliers and seamless logistics solutions. Our commitment to excellence ensures that every shipment meets the highest standards of quality and reliability.',
+  cta: 'Learn More',
+  ctaLink: '#capabilities',
+}
