@@ -15,8 +15,8 @@ const CTASection = () => {
     })
   }
   return (
-    <Container
-      className="flex items-center pt-[60px]!"
+    <div
+      className="m-5 flex items-center pt-[60px]!"
       id="cta"
     >
       <div className="bg-primary/80 w-full rounded-4xl py-[60px]">
@@ -25,7 +25,10 @@ const CTASection = () => {
             <h2 className="text-background text-4xl font-medium md:text-5xl">{CONTACT_CTA.headline}</h2>
             <p className="text-background text-base font-medium md:text-lg">{CONTACT_CTA.description}</p>
           </Copy>
-          <FadeIn className="mx-auto w-fit">
+          <FadeIn
+            className="mx-auto w-fit"
+            duration={0.8}
+          >
             <Button
               onClick={() => navigateTo(CONTACT_CTA.ctaLink)}
               variant="secondary"
@@ -35,7 +38,7 @@ const CTASection = () => {
           </FadeIn>
         </div>
       </div>
-    </Container>
+    </div>
   )
 }
 
