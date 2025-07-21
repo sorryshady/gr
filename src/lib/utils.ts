@@ -87,5 +87,7 @@ export const formatImageUrl = (
   if (options?.brightness) params.append('bri', options.brightness.toString())
   if (options?.contrast) params.append('con', options.contrast.toString())
 
-  return `https://images.unsplash.com/${unsplashId}?${params.toString()}`
+  const link = `https://images.unsplash.com/${unsplashId}?${params.toString()}`
+  // console.log(link)
+  return link
 }

@@ -22,7 +22,7 @@ const IndustriesSection = () => {
           {EXPORTS_INDUSTRIES_CONTENT.industries.map((industry, index) => (
             <FadeIn
               key={index}
-              delay={index * 0.1}
+              delay={index * 0.15}
             >
               <article className="text-primary/70 hover:text-primary border-primary/50 cursor-default rounded-4xl border bg-blue-200/10 p-5 text-2xl font-medium shadow-lg transition-[colors,box-shadow] duration-300 hover:shadow-2xl">
                 <p className="text-center">{industry}</p>

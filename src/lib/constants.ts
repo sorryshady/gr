@@ -316,7 +316,87 @@ export const EXPORTS_PROCESS_CONTENT: PageContent['exportsProcess'] = {
   ],
 }
 
+export const EVENTS_HERO_CONTENT: PageContent['eventsHero'] = {
+  heading: 'Signature Events',
+  tagline: 'Experiences That Define Excellence.',
+  description:
+    'From luxury automobile showcases to high-profile brand launches, we create unforgettable experiences that capture attention, build brands, and drive market impact. Our events are meticulously crafted to deliver exceptional results.',
+  imageLink: 'photo-1492684223066-81342ee5ff30',
+  cta: 'Learn More',
+  ctaLink: '#capabilities',
+}
+
+export const EVENTS_CAPABILITIES_CONTENT: PageContent['eventsCapabilities'] = {
+  heading: 'Event Capabilities',
+  headLine: 'Crafting Exceptional Experiences',
+  description:
+    'We specialize in creating exceptional experiences across multiple event categories, each designed to deliver maximum impact and lasting impressions.',
+  capabilities: [
+    {
+      title: 'Luxury Automobile Showcases',
+      description: 'Exclusive automotive events that highlight premium vehicles and cutting-edge technology',
+    },
+    {
+      title: 'Product Launches',
+      description: 'Strategic launch events that generate buzz and drive market adoption',
+    },
+    {
+      title: 'Experiential Marketing',
+      description: 'Immersive brand experiences that create lasting connections with audiences',
+    },
+    {
+      title: 'Corporate Gatherings',
+      description: 'Professional events that strengthen business relationships and drive growth',
+    },
+  ],
+}
+
+export const EVENTS_NOTABLE_EVENTS_CONTENT: PageContent['eventsNotableEvents'] = {
+  heading: 'Notable Events',
+  description:
+    'A selection of our signature events that have made headlines and delivered exceptional results for our clients.',
+  events: [
+    'Luxury Car Exhibition 2023',
+    'Tech Innovation Summit',
+    'Fashion Week Showcase',
+    'Corporate Leadership Forum',
+  ],
+}
+
+export const EVENTS_PROCESS_CONTENT: PageContent['eventsProcess'] = {
+  heading: 'Our Process',
+  headLine: 'From Vision to Reality',
+  description:
+    'From concept to execution, we manage every detail to ensure your event exceeds expectations and achieves its objectives.',
+  process: [
+    {
+      title: 'Strategy & Concept',
+      description:
+        '   We develop a comprehensive event strategy aligned with your brand objectives and target audience.',
+    },
+    {
+      title: 'Planning & Design',
+      description:
+        'Detailed planning and creative design ensure every element contributes to an exceptional experience.',
+    },
+    {
+      title: 'Production & Setup',
+      description: 'Professional production and meticulous setup create the perfect environment for your event.',
+    },
+    {
+      title: 'Execution & Follow-up',
+      description: 'Flawless execution and comprehensive follow-up ensure lasting impact and measurable results.',
+    },
+  ],
+}
+
 export const TAGLINES = {
   exports: 'We deliver what we promise — excellence in every shipment.',
   events: 'Our events make headlines, build brands, and move markets.',
 }
+
+export const IMAGES = [
+  'photo-1497366216548-37526070297c',
+  'photo-1497366216548-37526070297c',
+  'photo-1441986300917-64674bd600d8',
+]

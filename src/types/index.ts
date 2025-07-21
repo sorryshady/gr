@@ -122,6 +122,37 @@ export interface PageContent {
       description: string
     }[]
   }
+  eventsHero: {
+    imageLink: string
+    heading: string
+    tagline: string
+    description: string
+    cta: string
+    ctaLink: string
+  }
+  eventsCapabilities: {
+    heading: string
+    headLine: string
+    description: string
+    capabilities: {
+      title: string
+      description: string
+    }[]
+  }
+  eventsNotableEvents: {
+    heading: string
+    description: string
+    events: string[]
+  }
+  eventsProcess: {
+    heading: string
+    headLine: string
+    description: string
+    process: {
+      title: string
+      description: string
+    }[]
+  }
 }
 
 export interface SiteConfig {
