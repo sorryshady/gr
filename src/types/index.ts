@@ -39,6 +39,30 @@ export interface PageContent {
     services: Service[]
   }
   services: Service[]
+  aboutHero: {
+    imageLink: string
+    heading: string
+    tagline: string
+    description: string
+    cta: string
+    ctaLink: string
+  }
+  aboutPhilosophy: {
+    heading: string
+    headLine: string
+    description: string[]
+    imageLink: string
+  }
+  aboutLeadership: {
+    heading: string
+    headLine: string
+    description: string
+    cardContent: {
+      abb: string
+      title: string
+      description: string
+    }[]
+  }
 }
 
 export interface SiteConfig {

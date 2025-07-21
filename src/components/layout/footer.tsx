@@ -5,6 +5,7 @@ import { useTransitionRouter } from 'next-view-transitions'
 import { usePathname } from 'next/navigation'
 import Button from '../ui/button'
 import Copy from '../ui/copy/copy'
+import FadeIn from '../animations/fade-in'
 
 const Footer = () => {
   const router = useTransitionRouter()

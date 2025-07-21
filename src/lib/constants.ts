@@ -107,3 +107,51 @@ export const SITE_CONFIG: SiteConfig = {
     twitter: 'https://twitter.com/grgroup',
   },
 }
+
+export const ABOUT_HERO_CONTENT: PageContent['aboutHero'] = {
+  imageLink: 'photo-1497366216548-37526070297c',
+  heading: 'About GR Group',
+  tagline: 'Redefining Lifestyle. Driving Global Change.',
+  description:
+    ' A multidisciplinary conglomerate building bridges between premium products, unforgettable experiences, and innovative ventures.',
+  cta: 'View Philosophy',
+  ctaLink: '#philosophy',
+}
+
+export const ABOUT_PHILOSOPHY_CONTENT: PageContent['aboutPhilosophy'] = {
+  heading: 'Our Philosophy',
+  headLine: 'Driven by Purpose, Defined by Vision',
+  description: [
+    'At GR Group, we believe that true innovation happens at theintersection of diverse industries and perspectives. Our multidisciplinary approach allows us to see opportunities where others see boundaries.',
+    'We are committed to excellence in everything we do, from sourcing premium products for global markets to creating unforgettable experiences that build brands and move markets. Our vision extends beyond traditional business models to embrace sustainability, craftsmanship, and conscious consumerism.',
+    'Every partnership we forge, every event we create, and every venture we launch is guided by our core principle: to redefine lifestyle while driving meaningful global change.',
+  ],
+  imageLink: 'photo-1552664730-d307ca884978',
+}
+
+export const ABOUT_LEADERSHIP_CONTENT: PageContent['aboutLeadership'] = {
+  heading: 'Leadership & Vision',
+  headLine: 'Leading with Vision, Building with Purpose',
+  description:
+    'Our leadership team is at the forefront of shaping the future of GR Group. With a shared vision of innovation, sustainability, and impact, they drive our mission forward with precision and purpose.',
+  cardContent: [
+    {
+      abb: 'GR',
+      title: 'Global Exports Leadership',
+      description:
+        'Driving excellence in international trade with a focus on premium products and trusted partnerships across global markets.',
+    },
+    {
+      abb: 'SE',
+      title: 'Signature Events Leadership',
+      description:
+        'Creating unforgettable experiences that make headlines, build brands, and move markets through innovative event management.',
+    },
+    {
+      abb: 'FV',
+      title: 'Future Ventures Leadership',
+      description:
+        'Pioneering sustainable lifestyle ventures and creative collaborations that shape the future of conscious consumerism.',
+    },
+  ],
+}

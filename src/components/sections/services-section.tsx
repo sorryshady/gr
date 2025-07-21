@@ -1,5 +1,5 @@
 'use client'
-import { WHAT_WE_DO_CONTENT } from '@/lib/constants'
+import { ABOUT_LEADERSHIP_CONTENT, WHAT_WE_DO_CONTENT } from '@/lib/constants'
 import Container from '../layout/container'
 import Copy from '../ui/copy/copy'
 import CounterDots from '../ui/counter-dots'
@@ -31,57 +31,55 @@ const ServicesSection = () => {
             <p className="text-primary/80 text-base font-medium md:text-lg">{WHAT_WE_DO_CONTENT.description}</p>
           </Copy>
         </div>
-        <FadeIn
-          duration={0.8}
-          stagger={0.1}
-          easing="power2.out"
-          className="mt-10 grid w-full max-w-6xl grid-cols-1 gap-5 p-0 md:p-5 lg:grid-cols-2"
-        >
+        <div className="mx-auto mt-10 grid w-full max-w-6xl grid-cols-1 gap-5 p-0 md:grid-cols-2 md:p-5 lg:grid-cols-2">
           {WHAT_WE_DO_CONTENT.services.map((service, index) => (
-            <article
+            <FadeIn
               key={service.id}
-              className="bg-background relative w-full rounded-4xl shadow-lg transition-all duration-300 hover:shadow-2xl"
+              delay={index * 0.1}
+              direction={index % 2 === 0 ? 'right' : 'left'}
             >
-              <CounterDots count={index + 1} />
+              <article className="bg-background relative flex w-full flex-col rounded-4xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+                <CounterDots count={index + 1} />
 
-              <div className="mx-5 mt-16 mb-10">
-                <h3 className="text-primary mb-2 text-2xl font-medium">{service.title}</h3>
-                <p className="text-primary/80 mb-4 text-sm font-medium uppercase">{service.tagline}</p>
-                <div className="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2">
-                  {service.features.map(feature => (
-                    <div
-                      className="flex items-center gap-2"
-                      key={feature}
+                <div className="mx-5 mt-16 mb-10">
+                  <h3 className="text-primary mb-2 text-2xl font-medium">{service.title}</h3>
+                  <p className="text-primary/80 mb-4 text-sm font-medium uppercase">{service.tagline}</p>
+                  <div className="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2">
+                    {service.features.map(feature => (
+                      <div
+                        className="flex items-center gap-2"
+                        key={feature}
+                      >
+                        <div className="bg-primary h-2 w-2 rounded-full" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  {service.testimonial && (
+                    <blockquote className="border-primary mb-4 border-l-4 pl-3 sm:pl-4">
+                      <p className="text-xs leading-relaxed text-gray-700 italic sm:text-sm">
+                        &ldquo;{service.testimonial}&rdquo;
+                      </p>
+                    </blockquote>
+                  )}
+                  {service.isComingSoon ? (
+                    <p className="text-primary/80 text-sm font-medium">Stay tuned for updates</p>
+                  ) : (
+                    <Button
+                      size="md"
+                      variant="link"
+                      onClick={() => navigateTo(service.route)}
+                      className="relative flex items-center gap-2"
                     >
-                      <div className="bg-primary h-2 w-2 rounded-full" />
-                      {feature}
-                    </div>
-                  ))}
+                      <span>Learn More</span>
+                      <ExternalLink className="h-4 w-4" />
+                    </Button>
+                  )}
                 </div>
-                {service.testimonial && (
-                  <blockquote className="border-primary mb-4 border-l-4 pl-3 sm:pl-4">
-                    <p className="text-xs leading-relaxed text-gray-700 italic sm:text-sm">
-                      &ldquo;{service.testimonial}&rdquo;
-                    </p>
-                  </blockquote>
-                )}
-                {service.isComingSoon ? (
-                  <p className="text-primary/80 text-sm font-medium">Stay tuned for updates</p>
-                ) : (
-                  <Button
-                    size="md"
-                    variant="link"
-                    onClick={() => navigateTo(service.route)}
-                    className="relative flex items-center gap-2"
-                  >
-                    <span>Learn More</span>
-                    <ExternalLink className="h-4 w-4" />
-                  </Button>
-                )}
-              </div>
-            </article>
+              </article>
+            </FadeIn>
           ))}
-        </FadeIn>
+        </div>
       </div>
     </Container>
   )

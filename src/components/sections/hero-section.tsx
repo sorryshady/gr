@@ -36,6 +36,7 @@ const HeroSection = () => {
       <FadeIn
         stagger={0.1}
         duration={1.1}
+        delay={0.2}
         direction="right"
         className="text-background absolute bottom-20 left-4 z-10 flex max-w-3xl flex-col gap-4 md:left-[80px] xl:left-[100px]"
       >

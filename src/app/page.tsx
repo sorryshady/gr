@@ -1,4 +1,3 @@
-import Footer from '@/components/layout/footer'
 import AboutSection from '@/components/sections/about-section'
 import CTASection from '@/components/sections/cta-section'
 import HeroSection from '@/components/sections/hero-section'
@@ -11,7 +10,6 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <CTASection />
-      <Footer />
     </main>
   )
 }

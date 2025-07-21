@@ -1,11 +1,14 @@
-import HeroSection from '@/components/sections/hero-section'
 import React from 'react'
+import HeroSection from './_components/hero-section'
+import PhilosophySection from './_components/philosophy-section'
+import LeadershipSection from './_components/leadership-section'
 
 export default function AboutPage() {
   return (
-    <div>
+    <main>
       <HeroSection />
-      <div className="h-[1000px] bg-red-100" />
-    </div>
+      <PhilosophySection />
+      <LeadershipSection />
+    </main>
   )
 }
