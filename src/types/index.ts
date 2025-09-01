@@ -170,11 +170,13 @@ export interface SiteConfig {
   description: string
   url: string
   email: string
-  social: {
-    linkedin: string
-    instagram: string
-    twitter: string
-  }
+  primaryPhone: string
+  secondaryPhone: string
+  // social: {
+  //   linkedin: string
+  //   instagram: string
+  //   twitter: string
+  // }
 }
 
 export interface ContactFormData {

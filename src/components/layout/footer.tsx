@@ -25,7 +25,7 @@ const Footer = () => {
           <Copy reverse={false}>
             <h3 className="mb-3 text-2xl font-bold text-gray-900">GR Group</h3>
             <p className="mb-2 max-w-lg font-medium text-gray-700">{SITE_CONFIG.description}</p>
-            <div className="text-primary font-medium">
+            <div className="text-primary flex flex-col gap-2 font-medium">
               <Button
                 variant="link"
                 onClick={() => {
@@ -33,6 +33,28 @@ const Footer = () => {
                 }}
               >
                 {SITE_CONFIG.email}
+              </Button>
+            </div>
+            <div>
+              <Button
+                variant="link"
+                size="md"
+                onClick={() => {
+                  window.open(`tel:${SITE_CONFIG.primaryPhone}`, '_blank')
+                }}
+              >
+                {SITE_CONFIG.primaryPhone}
+              </Button>
+            </div>
+            <div>
+              <Button
+                variant="link"
+                size="md"
+                onClick={() => {
+                  window.open(`tel:${SITE_CONFIG.secondaryPhone}`, '_blank')
+                }}
+              >
+                {SITE_CONFIG.secondaryPhone}
               </Button>
             </div>
           </Copy>
@@ -60,7 +82,8 @@ const Footer = () => {
           <Copy reverse={false}>
             <h3 className="mb-3 text-lg font-medium text-gray-900 underline">Socials</h3>
             <div className="flex flex-col items-start gap-1">
-              <Button
+              <p className="font-medium">Coming Soon!</p>
+              {/* <Button
                 variant="link"
                 onClick={() => {
                   window.open(SITE_CONFIG.social.instagram, '_blank')
@@ -86,7 +109,7 @@ const Footer = () => {
                 className="text-gray-700!"
               >
                 Twitter
-              </Button>
+              </Button> */}
             </div>
           </Copy>
         </div>

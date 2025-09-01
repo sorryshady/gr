@@ -112,12 +112,14 @@ export const SITE_CONFIG: SiteConfig = {
   description:
     'A multidisciplinary conglomerate specializing in premium exports, signature events, lifestyle ventures, and strategic collaborations.',
   url: 'https://grgroup.com',
-  email: 'hello@grgroup.com',
-  social: {
-    linkedin: 'https://linkedin.com/company/grgroup',
-    instagram: 'https://instagram.com/grgroup',
-    twitter: 'https://twitter.com/grgroup',
-  },
+  email: 'info@thegrgroup.com',
+  primaryPhone: '+91 85479 20399',
+  secondaryPhone: '+91 80755 91227',
+  // social: {
+  //   linkedin: 'https://linkedin.com/company/grgroup',
+  //   instagram: 'https://instagram.com/grgroup',
+  //   twitter: 'https://twitter.com/grgroup',
+  // },
 }
 
 export const CONTACT_HERO_CONTENT: PageContent['contactHero'] = {
@@ -127,8 +129,8 @@ export const CONTACT_HERO_CONTENT: PageContent['contactHero'] = {
   description:
     "Ready to explore partnership opportunities, discuss your next project, or learn more about our services? We're here to turn ambitious ideas into reality through meaningful collaboration.",
   primaryContactEmail: SITE_CONFIG.email,
-  primaryContactPhone: '+1 (555) 123-4567',
-  businessHours: 'Monday - Friday, 9:00 AM - 6:00 PM EST',
+  primaryContactPhone: '+91 85479 20399',
+  businessHours: 'Monday - Friday, 9:00 AM - 6:00 PM IST',
   responseTime: 'We typically respond within 24 hours',
 } as const
 
@@ -442,7 +444,7 @@ export const CONTACT_METHODS: ContactMethod[] = [
   {
     type: 'hours',
     label: 'Business Hours',
-    value: 'Monday - Friday, 9:00 AM - 6:00 PM EST',
+    value: 'Monday - Friday, 9:00 AM - 6:00 PM IST',
     icon: Clock,
   },
 ] as const
