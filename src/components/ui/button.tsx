@@ -24,7 +24,7 @@ const Button = ({
   isLoading,
 }: ButtonProps) => {
   const buttonClasses = cn(
-    'rounded-full px-4 py-2 text-sm font-medium transition-colors duration-500 cursor-pointer relative group',
+    'rounded-full max-w-3xl px-4 py-2 text-sm font-medium transition-colors duration-500 cursor-pointer relative group',
     className,
   )
 
@@ -57,7 +57,10 @@ const Button = ({
       onClick={onClick}
     >
       {isLoading ? (
-        <Loader2 className="h-4 w-4 animate-spin" />
+        <>
+          <Loader2 className="h-4 w-4 animate-spin" />
+          {children}
+        </>
       ) : (
         <>
           {children}

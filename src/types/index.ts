@@ -153,6 +153,16 @@ export interface PageContent {
       description: string
     }[]
   }
+  contactHero: {
+    imageLink: string
+    heading: string
+    tagline: string
+    description: string
+    primaryContactEmail: string
+    primaryContactPhone: string
+    businessHours: string
+    responseTime: string
+  }
 }
 
 export interface SiteConfig {
@@ -165,4 +175,44 @@ export interface SiteConfig {
     instagram: string
     twitter: string
   }
+}
+
+export interface ContactFormData {
+  name: string
+  email: string
+  company?: string
+  inquiryType: 'exports' | 'events' | 'ventures' | 'general'
+  message: string
+}
+
+export interface ContactFormErrors {
+  name?: string
+  email?: string
+  company?: string
+  inquiryType?: string
+  message?: string
+}
+
+export interface ContactFormState {
+  data: ContactFormData
+  errors: ContactFormErrors
+  isSubmitting: boolean
+  isSubmitted: boolean
+}
+
+export interface ContactMethod {
+  type: 'email' | 'phone' | 'hours'
+  label: string
+  value: string
+  action?: string
+  icon: LucideIcon
+}
+
+export interface OfficeLocation {
+  id: string
+  name: string
+  address: string[]
+  phone?: string
+  email?: string
+  isPrimary: boolean
 }

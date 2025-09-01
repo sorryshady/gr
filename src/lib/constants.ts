@@ -1,13 +1,24 @@
-import { NavigationItem, PageContent, SiteConfig } from '@/types'
-import { CircleCheck, Globe, Handshake, PackageSearch, ShieldCheck, Sparkle, Sprout } from 'lucide-react'
+import { ContactMethod, NavigationItem, PageContent, SiteConfig } from '@/types'
+import {
+  CircleCheck,
+  Clock,
+  Globe,
+  Handshake,
+  Mail,
+  PackageSearch,
+  Phone,
+  ShieldCheck,
+  Sparkle,
+  Sprout,
+} from 'lucide-react'
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Exports', href: '/exports' },
   { name: 'Events', href: '/events' },
-  { name: 'Ventures', href: '/ventures' },
-  { name: 'Collaborations', href: '/collaborations' },
+  //   { name: 'Ventures', href: '/ventures' },
+  //   { name: 'Collaborations', href: '/collaborations' },
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -108,6 +119,18 @@ export const SITE_CONFIG: SiteConfig = {
     twitter: 'https://twitter.com/grgroup',
   },
 }
+
+export const CONTACT_HERO_CONTENT: PageContent['contactHero'] = {
+  imageLink: 'photo-1423666639041-f56000c27a9a', // Professional office/business setting
+  heading: 'Contact Us',
+  tagline: 'Your Gateway to Global Excellence.',
+  description:
+    "Ready to explore partnership opportunities, discuss your next project, or learn more about our services? We're here to turn ambitious ideas into reality through meaningful collaboration.",
+  primaryContactEmail: SITE_CONFIG.email,
+  primaryContactPhone: '+1 (555) 123-4567',
+  businessHours: 'Monday - Friday, 9:00 AM - 6:00 PM EST',
+  responseTime: 'We typically respond within 24 hours',
+} as const
 
 export const ABOUT_HERO_CONTENT: PageContent['aboutHero'] = {
   imageLink: 'photo-1497366216548-37526070297c',
@@ -400,3 +423,26 @@ export const IMAGES = [
   'photo-1497366216548-37526070297c',
   'photo-1441986300917-64674bd600d8',
 ]
+
+export const CONTACT_METHODS: ContactMethod[] = [
+  {
+    type: 'email',
+    label: 'Email Us',
+    value: SITE_CONFIG.email,
+    action: `mailto:${SITE_CONFIG.email}`,
+    icon: Mail,
+  },
+  {
+    type: 'phone',
+    label: 'Call Us',
+    value: '+1 (555) 123-4567',
+    action: 'tel:+15551234567',
+    icon: Phone,
+  },
+  {
+    type: 'hours',
+    label: 'Business Hours',
+    value: 'Monday - Friday, 9:00 AM - 6:00 PM EST',
+    icon: Clock,
+  },
+] as const

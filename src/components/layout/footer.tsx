@@ -5,7 +5,6 @@ import { useTransitionRouter } from 'next-view-transitions'
 import { usePathname } from 'next/navigation'
 import Button from '../ui/button'
 import Copy from '../ui/copy/copy'
-import FadeIn from '../animations/fade-in'
 
 const Footer = () => {
   const router = useTransitionRouter()
@@ -23,7 +22,7 @@ const Footer = () => {
     >
       <div className="grid grid-cols-1 gap-8 md:grid-cols-4 xl:px-[100px]">
         <div className="md:col-span-2">
-          <Copy>
+          <Copy reverse={false}>
             <h3 className="mb-3 text-2xl font-bold text-gray-900">GR Group</h3>
             <p className="mb-2 max-w-lg font-medium text-gray-700">{SITE_CONFIG.description}</p>
             <div className="text-primary font-medium">
@@ -39,7 +38,7 @@ const Footer = () => {
           </Copy>
         </div>
         <div className="md:col-span-1">
-          <Copy>
+          <Copy reverse={false}>
             <h3 className="mb-3 text-lg font-medium text-gray-900 underline">Navigation</h3>
             <div className="flex flex-col gap-1">
               {NAVIGATION_ITEMS.map(item => (
@@ -58,7 +57,7 @@ const Footer = () => {
           </Copy>
         </div>
         <div className="md:col-span-1">
-          <Copy>
+          <Copy reverse={false}>
             <h3 className="mb-3 text-lg font-medium text-gray-900 underline">Socials</h3>
             <div className="flex flex-col items-start gap-1">
               <Button

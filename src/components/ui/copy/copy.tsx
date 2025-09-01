@@ -17,9 +17,10 @@ interface CopyProps {
   animateOnScroll?: boolean
   delay?: number
   className?: string
+  reverse?: boolean
 }
 
-export default function Copy({ children, animateOnScroll = true, delay = 0, className }: CopyProps) {
+export default function Copy({ children, animateOnScroll = true, delay = 0, className, reverse = true }: CopyProps) {
   const isMobile = useMedia('(max-width: 767px)', false)
   const containerRef = useRef<HTMLDivElement>(null)
   const elementRefs = useRef<HTMLElement[]>([])
@@ -83,7 +84,7 @@ export default function Copy({ children, animateOnScroll = true, delay = 0, clas
             trigger: containerRef.current,
             start: isMobile ? 'top 90%' : 'top 75%',
             // markers: true,
-            toggleActions: 'play none none reverse',
+            toggleActions: reverse ? 'play none none reverse' : 'play none none none',
           },
         })
       } else {
