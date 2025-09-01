@@ -38,11 +38,11 @@ const HeroSection = () => {
         duration={1.1}
         delay={0.2}
         direction="right"
-        className="text-background absolute bottom-20 left-4 z-10 flex max-w-3xl flex-col gap-4 md:left-[80px] xl:left-[100px]"
+        className="text-background absolute bottom-20 z-10 flex max-w-4xl flex-col gap-6 px-4 md:left-[80px] xl:left-[100px]"
       >
         <h1 className="text-4xl font-medium sm:text-5xl md:text-7xl">{HERO_CONTENT.headline}</h1>
         <h2 className="text-lg font-medium tracking-wide sm:text-xl md:text-2xl">{HERO_CONTENT.subtext}</h2>
-        <div className="flex flex-col gap-4 sm:flex-row">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           <Button
             variant="secondary"
             size="lg"

@@ -40,7 +40,7 @@ const ContactHeroSection = () => {
         duration={1.1}
         delay={0.2}
         direction="right"
-        className="text-background absolute bottom-20 left-4 z-10 flex max-w-4xl flex-col gap-6 md:left-[80px] xl:left-[100px]"
+        className="text-background absolute bottom-20 z-10 flex max-w-4xl flex-col gap-6 px-4 md:left-[80px] xl:left-[100px]"
       >
         <div className="flex flex-col gap-4">
           <h1 className="text-4xl font-medium sm:text-5xl md:text-7xl">{CONTACT_HERO_CONTENT.heading}</h1>
@@ -53,7 +53,7 @@ const ContactHeroSection = () => {
             variant="secondary"
             size="lg"
             onClick={handleEmailClick}
-            className="flex items-center gap-2"
+            className="flex items-center justify-center gap-2"
           >
             <Mail className="h-4 w-4" />
             Email Us
@@ -62,7 +62,7 @@ const ContactHeroSection = () => {
             variant="outline"
             size="lg"
             onClick={handlePhoneClick}
-            className="flex items-center gap-2"
+            className="flex items-center justify-center gap-2"
           >
             <Phone className="h-4 w-4" />
             Call Us
