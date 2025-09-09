@@ -8,7 +8,7 @@ export default function ContactPage() {
     <main>
       <ContactHeroSection />
 
-      <ContactFormSection />
+      {/* <ContactFormSection /> */}
     </main>
   )
 }

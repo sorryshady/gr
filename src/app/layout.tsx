@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Collection',
+  title: 'GR Group',
   description: 'Collection',
 }
 
