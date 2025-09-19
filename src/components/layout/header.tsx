@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRef, useState } from 'react'
 import Button from '../ui/button'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -142,20 +143,25 @@ const Header = () => {
         ref={headerRef}
         className="bg-background fixed top-3 right-4 left-4 z-50 rounded-full border border-gray-200/30 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-sm md:right-[80px] md:left-[80px] xl:right-[100px] xl:left-[100px]"
       >
-        <div className="mx-auto flex items-center justify-between">
+        <div className="relative mx-auto flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center space-x-2"
+            className=""
             onClick={e => {
               e.preventDefault()
               navigateTo('/')
             }}
           >
-            <div className="bg-primary flex h-8 w-8 items-center justify-center rounded-lg sm:h-10 sm:w-10">
+            <Image
+              src="/logo.png"
+              height={65}
+              width={65}
+              alt="logo"
+            />
+            {/* <div className="bg-primary flex h-8 w-8 items-center justify-center rounded-lg sm:h-10 sm:w-10">
               <span className="text-background text-sm font-bold md:text-base">GR</span>
-            </div>
-            <span className="text-xl font-semibold text-gray-900 md:text-2xl">GR Groups</span>
+            </div> */}
           </Link>
 
           {/* Desktop Navigation */}
