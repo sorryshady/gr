@@ -22,16 +22,16 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
 
   const scrollSettings = isMobile
     ? {
-        duration: 1,
+        duration: 0.6,
         easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         direction: 'vertical',
         gestureDirection: 'vertical',
         smooth: true,
         smoothTouch: true,
-        touchMultiplier: 1.5,
+        touchMultiplier: 2,
         infinite: false,
-        lerp: 0.05,
-        wheelMultiplier: 1,
+        lerp: 0.2,
+        wheelMultiplier: 1.5,
         orientation: 'vertical' as const,
         smoothWheel: true,
         syncTouch: true,

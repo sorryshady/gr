@@ -147,7 +147,7 @@ const Header = () => {
           {/* Logo */}
           <Link
             href="/"
-            className=""
+            className="select-none"
             onClick={e => {
               e.preventDefault()
               navigateTo('/')
