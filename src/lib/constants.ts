@@ -148,7 +148,7 @@ export const ABOUT_PHILOSOPHY_CONTENT: PageContent['aboutPhilosophy'] = {
   heading: 'Our Philosophy',
   headLine: 'Driven by Purpose, Defined by Vision',
   description: [
-    'At GR Group, we believe that true innovation happens at theintersection of diverse industries and perspectives. Our multidisciplinary approach allows us to see opportunities where others see boundaries.',
+    'At GR Group, we believe that true innovation happens at the intersection of diverse industries and perspectives. Our multidisciplinary approach allows us to see opportunities where others see boundaries.',
     'We are committed to excellence in everything we do, from sourcing premium products for global markets to creating unforgettable experiences that build brands and move markets. Our vision extends beyond traditional business models to embrace sustainability, craftsmanship, and conscious consumerism.',
     'Every partnership we forge, every event we create, and every venture we launch is guided by our core principle: to redefine lifestyle while driving meaningful global change.',
   ],
